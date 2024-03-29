@@ -23,6 +23,14 @@ class PostCreated extends Mailable
         $this->post = $post;
     }
 
+    public function build()
+    {
+        return $this->view('mails.post-created');
+    }
+
+
+
+
     /**
      * Get the message envelope.
      */

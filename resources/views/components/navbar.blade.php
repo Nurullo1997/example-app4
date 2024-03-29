@@ -36,10 +36,10 @@
                 <span class="badge badge-light">{{auth()->user()->unreadNotifications()->count()}}</span>
             </a>
 
-            <div>
+          {{--   <div>
                 {{ auth()->user()->name }}
             </div>
-         
+          --}}
        
          <a href="{{ route('posts.create') }}" class="btn btn-primary mr-2 d-none d-lg-block">Post Yaratish</a>
          <form action="{{ route('logout') }}" method="POST">

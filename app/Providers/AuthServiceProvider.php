@@ -33,6 +33,10 @@ class AuthServiceProvider extends ServiceProvider
       return $user->hasRole('blogger');
     });
 
+    /* Gate::define('delete-post', function (User $user, Post $post) {
+      return $user->hasRole('blogger');
+    });
+ */
 
   }
 }
