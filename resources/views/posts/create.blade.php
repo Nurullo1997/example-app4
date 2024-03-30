@@ -9,8 +9,6 @@
 
     </x-page-header>
 
-
-
     <div class="container ">
         <div class="w-50 py-4 ">
             <div id="success"></div>
@@ -47,7 +45,7 @@
 
                 <div class="control-group mb-4">
 
-                    <input type="file" class="form-control p-4" name="photo" id="subject" placeholder="Rasm" />
+                    <input name="photo" type="file" class="form-control p-4" id="subject" placeholder="Rasm"/>
                     @error('photo')
                         <p class="help-block text-danger">{{ $message }}</p>
                     @enderror

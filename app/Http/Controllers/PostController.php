@@ -19,14 +19,16 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Foundation\Auth\Access\AuthorizesResource;
+
 
 class PostController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth')->except('index', 'show');
-
-        // $this->authorizeResource(Post::class, 'post');
+        
+       // $this->authorizeResource(Post::class, 'post');
     }
 
 
@@ -35,9 +37,7 @@ class PostController extends Controller
 
     public function index()
     {
-
         $posts = Post::latest()->paginate(9);
-
         return view('posts.index')->with('posts', $posts);
     }
 
@@ -61,9 +61,10 @@ class PostController extends Controller
     {
         if ($request->hasFile('photo')) {
             $name = $request->file('photo')->getClientOriginalName();
-            $path = $request->file('photo')->storeAs('post-phots', $name);
+            $path = $request->file('photo')->storeAs('post-photos', $name);
         }
 
+ 
 
         $post =  Post::create([
             'user_id' => auth()->user()->id,

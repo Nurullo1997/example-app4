@@ -14,6 +14,7 @@ class StorePostRequest extends FormRequest
          'title' => 'Sarlavha',
          'short_content' => 'Qisqacha mazmun',
           'content' => 'Maqola',
+        
         ];
     }
     /**
@@ -36,7 +37,8 @@ class StorePostRequest extends FormRequest
             'title' => 'required|max:255',
             'short_content' => 'required',
             'content' => 'required',
-            'photo' => 'nullable|image|max:21024',
+           // 'photo' => 'nullable',
+            'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ];
     }
 }

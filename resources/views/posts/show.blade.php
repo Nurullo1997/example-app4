@@ -51,8 +51,8 @@
                     </div>
 
                     <div class="mb-5">
-                        <img class="img-fluid rounded w-100 mb-4" src="{{ asset('storage/' . $post->photo) }}"
-                            alt="Image">
+                        <img class="img-fluid rounded w-100 mb-4" src="{{ asset('storage/post-phots/'.$post->photo) }}"
+                            alt="">
                         <p>{{ $post->content }}</p>
                     </div>
 
@@ -147,7 +147,7 @@
 
                         @foreach ($recent_posts as $post)
                             <div class="d-flex align-items-center border-bottom mb-3 pb-3">
-                                <img class="img-fluid rounded" src="{{ asset('storage/' . $post->photo) }}"
+                                <img class="img-fluid rounded" src="{{ asset('storage/'.$post->photo) }}"
                                     style="width: 80px; height: 80px; object-fit: cover;" alt="">
                                 <div class="d-flex flex-column pl-3">
                                     <a class="text-dark mb-2" href="">{{ $post->title }}</a>

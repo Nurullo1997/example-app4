@@ -30,7 +30,7 @@
                 @foreach ($posts as $post)
                     <div class="col-lg-4 col-md-6 mb-5">
                         <div class="position-relative mb-4">
-                            <img class="img-fluid rounded w-100" src="{{ asset('storage/' . $post->photo) }}"
+                            <img class="img-fluid rounded w-100" src="{{ asset('storage/'.$post->photo) }}"
                                 alt="">
                             <div class="blog-date">
                                 <h4 class="font-weight-bold mb-n1">01</h4>
@@ -56,7 +56,7 @@
                             <a class="btn btn-sm btn-primary py-2"
                                 href="{{ route('posts.show', ['post' => $post->id]) }}">O'qish</a>
                         @endif --}}
-                           @if (auth()->user()->hasRole('admin'))
+                           @if (auth()->user()->hasRole('blogger'))
                             <a class="btn btn-sm btn-primary py-2"
                                 href="{{ route('posts.show', ['post' => $post->id]) }}">O'qish</a>
                         @endif
