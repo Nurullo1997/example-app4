@@ -37,4 +37,4 @@ artisan queue:work
 
 
 ### Baza Strukturasi
-![alt text](img2.png)
+![alt text](img7.png)
